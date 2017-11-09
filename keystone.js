@@ -25,13 +25,13 @@ keystone.init({
 		partialsDir: 'templates/views/partials',
 		defaultLayout: 'default',
 		helpers: new require('./templates/views/helpers')(),
-		extname: '.hbs',
+		extname: '.hbs'
 	}).engine,
 
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'Y',
+	'user model': 'Y'
 });
 
 // Load your project's Models
@@ -44,7 +44,7 @@ keystone.set('locals', {
 	_: require('lodash'),
 	env: keystone.get('env'),
 	utils: keystone.utils,
-	editable: keystone.content.editable,
+	editable: keystone.content.editable
 });
 
 // Load your project's Routes
@@ -56,7 +56,7 @@ keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	galleries: 'galleries',
 	enquiries: 'enquiries',
-	ys: 'ys',
+	ys: 'ys'
 });
 
 // Start Keystone to connect to your database and initialise the web server
