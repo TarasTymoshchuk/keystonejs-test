@@ -13,10 +13,10 @@ var Post = new keystone.List('Post', {
 
 Post.add({
 	url: { type: String },
-	title: { type: String },
+	title: { type: String, required: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
-	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
-	rate: { type: String },
+	categories: { type: Types.Relationship, ref: 'PostCategory' },
+	rate: { type: Number },
 	tags: { type: String },
 	description: { type: String },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
@@ -25,9 +25,9 @@ Post.add({
 	},
 	backgroundImage: { type: Types.CloudinaryImage },
 	mainImage: { type: Types.CloudinaryImage },
-	backgroundImagePosition: { type: Types.Select, options: 'center, bottom, top', default: 'initial' },
-	author: { type: Types.Relationship, ref: 'Y', index: true, many: true },
-	seo: {
+	backgroundImagePosition: { type: Types.Select, options: 'center, bottom, top' },
+	author: { type: Types.Relationship, ref: 'User', index: true, many: true },
+	meta: {
 		title: { type: String },
 		description: { type: String },
 		keywords: { type: String }

@@ -146,7 +146,7 @@ module.exports = function () {
 	_helpers.adminEditableUrl = function (user, options) {
 		var rtn = keystone.app.locals.editable(user, {
 			list: 'Post',
-			id: options,
+			id: options
 		});
 		return rtn;
 	};

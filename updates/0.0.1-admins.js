@@ -8,9 +8,9 @@
  */
 
 exports.create = {
-	Y: [
-		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'taras.tymoshchuk@eliftech.com', 'password': 'asdf', 'isAdmin': true },
-	],
+	Admin: [
+		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'taras.tymoshchuk@eliftech.com', 'password': 'asdf', 'isAdmin': true }
+	]
 };
 
 /*

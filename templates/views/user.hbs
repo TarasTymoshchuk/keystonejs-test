@@ -1,0 +1,20 @@
+<div class="container">
+	<!-- if galleries -->
+	{{#if users}}
+		<div class="pb-2">Show {{ users.length }} users.</div>
+		{{#each users}}
+			<div class="user-block">
+				<img src="{{cloudinaryUrl photo width='60' height='80'}}">
+				<div class="user-info">
+					<h4>{{name.first}}</h4>
+					<h4>{{name.last}}</h4>
+					<h4>{{position}}</h4>
+				</div>
+			</div>
+			<hr>
+		{{/each}}
+	{{else}}
+		<!-- else -->
+		<h3 class="text-muted">There are no users yet.</h3>
+	{{/if}}
+</div>
